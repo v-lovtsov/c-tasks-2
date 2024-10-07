@@ -21,9 +21,27 @@ int main() {
     nums = (int *)malloc(n * sizeof(int));
     fill_array(nums, n);
 
+    int maxlen = 0;
+    int curlen = 0;
+
     for (int i = 0; i < n; i++) {
-        printf("%d\n", *(nums + i)); 
+        int num = *(nums + i);
+
+        if (num % 2 != 0)
+            curlen++;
+        else {
+            maxlen = curlen > maxlen ? curlen : maxlen;
+            curlen = 0; 
+        }
     }
+
+    for (int i = 0; i < n; i++) {
+        int num = *(nums + i);
+        
+        printf("%d ", num);
+    }
+
+    printf("\n%d\n", maxlen);
 
     free(nums);
 

@@ -4,6 +4,7 @@
 
 int is_int_sqrt(int num) {
     double nsqrt = sqrt(num);
+    
     if (nsqrt == floor(nsqrt))
         return 1;
     else 
@@ -14,6 +15,7 @@ int main() {
     int * nums;
     int n;
     int count = 0;
+
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
