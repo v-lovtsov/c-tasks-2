@@ -3,4 +3,4 @@ project(TASKS_08_10_24 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(TASKS_08_10_24 4.c)
+add_executable(TASKS_08_10_24 6.c)
