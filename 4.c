@@ -4,7 +4,7 @@
 #include "time.h"
 
 
-int fill_array(int * nums, int size) {
+void fill_array(int * nums, int size) {
     for (int i = 0; i < size; i++) {
         *(nums + i) = rand() % 10000;
     }
