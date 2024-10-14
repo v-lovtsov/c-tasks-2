@@ -3,6 +3,8 @@
 #include "math.h"
 #include "time.h"
 
+//DIDNT FINISHED
+
 int is_prime_step(int init, int cur, int count) {
     if (cur <= 2) 
         return init % 2 == 0 ? count + 1 : count;

@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "math.h"
-
+//DIDNT FINISH
 int NOD(int * nums, int size) {
 
 }
@@ -9,7 +9,7 @@ int NOD(int * nums, int size) {
 int main() {
     int * nums;
     int n;
-    
+
     scanf("%d", &n);
 
     nums = (int *)malloc(n * sizeof(int));
