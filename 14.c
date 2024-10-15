@@ -2,7 +2,7 @@
 #include "stdlib.h"
 #include "math.h"
 #include "time.h"
-//-
+
 void fill_array(int ** nums, int n, int * dirr, int * dirc, int idxr, int idxc, int count) {
     nums[idxc][idxr] = count;
 
@@ -36,11 +36,6 @@ void fill_array(int ** nums, int n, int * dirr, int * dirc, int idxr, int idxc, 
     }
 
     if (count < n*n) {
-        printf("\n");
-        printf("%d\n", *dirr);
-        printf("%d\n", *dirc);
-        printf("%d\n", idxr2);
-        printf("%d\n", idxc2);
         fill_array(nums, n, dirr, dirc, idxr2, idxc2, count + 1);
     }
 }

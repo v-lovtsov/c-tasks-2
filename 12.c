@@ -12,10 +12,11 @@ void fill_array(int * nums, int size) {
 int * add(int * n1, int * n2, int decimals) {
     int * res = (int *)malloc((decimals + 1) * sizeof(int));
     int mvdec = 0;
+
     for (int i = decimals - 1; i >= 0; i--) {
-        int sum  = *(n1 + i) + *(n2 + i) + mvdec;
+        int sum  = n1[i] + n2[i] + mvdec;
         int decimal = sum % 10;
-        *(res + i + 1) = decimal;
+        res[i + 1] = decimal;
 
         mvdec = sum / 10;
     }
@@ -47,7 +48,7 @@ int main() {
     result = add(n1, n2, decimals);
 
     for (int i = 0; i < decimals + 1; i++) {
-        int num = *(result + i);
+        int num = result[i];
         printf("%d", num);
     }
 

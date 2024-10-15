@@ -1,8 +1,8 @@
 [
 {
   "directory": "/Users/vladimirlovcov/Desktop/НГУ/Прога (Минак)/TASKS_08.10.24/build",
-  "command": "/usr/bin/clang -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1 -o CMakeFiles/TASKS_08_10_24.dir/14.c.o -c \"/Users/vladimirlovcov/Desktop/НГУ/Прога (Минак)/TASKS_08.10.24/14.c\"",
-  "file": "/Users/vladimirlovcov/Desktop/НГУ/Прога (Минак)/TASKS_08.10.24/14.c",
-  "output": "CMakeFiles/TASKS_08_10_24.dir/14.c.o"
+  "command": "/usr/bin/clang -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1 -o CMakeFiles/TASKS_08_10_24.dir/10.c.o -c \"/Users/vladimirlovcov/Desktop/НГУ/Прога (Минак)/TASKS_08.10.24/10.c\"",
+  "file": "/Users/vladimirlovcov/Desktop/НГУ/Прога (Минак)/TASKS_08.10.24/10.c",
+  "output": "CMakeFiles/TASKS_08_10_24.dir/10.c.o"
 }
 ]

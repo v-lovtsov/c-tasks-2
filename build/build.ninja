@@ -49,8 +49,8 @@ cmake_ninja_workdir = /Users/vladimirlovcov/Desktop/НГУ/Прога$ (Мина
 
 build cmake_object_order_depends_target_TASKS_08_10_24: phony || CMakeFiles/TASKS_08_10_24.dir
 
-build CMakeFiles/TASKS_08_10_24.dir/14.c.o: C_COMPILER__TASKS_08_10_24_unscanned_Debug /Users/vladimirlovcov/Desktop/НГУ/Прога$ (Минак)/TASKS_08.10.24/14.c || cmake_object_order_depends_target_TASKS_08_10_24
-  DEP_FILE = CMakeFiles/TASKS_08_10_24.dir/14.c.o.d
+build CMakeFiles/TASKS_08_10_24.dir/10.c.o: C_COMPILER__TASKS_08_10_24_unscanned_Debug /Users/vladimirlovcov/Desktop/НГУ/Прога$ (Минак)/TASKS_08.10.24/10.c || cmake_object_order_depends_target_TASKS_08_10_24
+  DEP_FILE = CMakeFiles/TASKS_08_10_24.dir/10.c.o.d
   FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
   OBJECT_DIR = CMakeFiles/TASKS_08_10_24.dir
   OBJECT_FILE_DIR = CMakeFiles/TASKS_08_10_24.dir
@@ -63,7 +63,7 @@ build CMakeFiles/TASKS_08_10_24.dir/14.c.o: C_COMPILER__TASKS_08_10_24_unscanned
 #############################################
 # Link the executable TASKS_08_10_24
 
-build TASKS_08_10_24: C_EXECUTABLE_LINKER__TASKS_08_10_24_Debug CMakeFiles/TASKS_08_10_24.dir/14.c.o
+build TASKS_08_10_24: C_EXECUTABLE_LINKER__TASKS_08_10_24_Debug CMakeFiles/TASKS_08_10_24.dir/10.c.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
   OBJECT_DIR = CMakeFiles/TASKS_08_10_24.dir
   POST_BUILD = :

@@ -6,7 +6,7 @@
 
 int fill_array(int * nums, int size) {
     for (int i = 0; i < size; i++) {
-        *(nums + i) = rand() % 10000;
+        nums[i] = rand() % 10000;
     }
 }
 
@@ -22,7 +22,7 @@ int main() {
     fill_array(nums, n);
 
     for (int i = 0; i < n; i++) {
-        printf("%d\n", *(nums + i)); 
+        printf("%d\n", nums[i]); 
     }
 
     free(nums);

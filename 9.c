@@ -5,12 +5,12 @@
 
 void fill_array(int * nums, int size) {
     for (int i = 0; i < size; i++) {
-        *(nums + i) = rand() % 10000;
+        nums[i] = rand() % 10000;
     }
 }
 
 int getmax(int * arr, int size, int max, int index) {
-    int bigger = *(arr + index) > max ? *(arr + index) : max;
+    int bigger = arr[index] > max ? arr[index] : max;
 
     if (index >= size - 1) 
         return bigger;
@@ -33,7 +33,7 @@ int main() {
     printf("%d\n", getmax(arr, size, *arr, 1));
 
     for (int i = 0; i < size; i++) {
-        int num = *(arr + i);
+        int num = arr[i];
         printf("%d ", num);
     }
 

@@ -14,9 +14,9 @@ int max(int * arr, int size) {
     int res = 0;
 
     for (int i = 0; i < size; i++) {
-        if (*(arr + i) > m) {
+        if (arr[i] > m) {
             res = i;
-            m = *(arr + i);
+            m = arr[i];
         }
     }
 
@@ -26,10 +26,11 @@ int max(int * arr, int size) {
 int * add(int * n1, int * n2, int decimals) {
     int * res = (int *)malloc((decimals + 1) * sizeof(int));
     int mvdec = 0;
+
     for (int i = decimals - 1; i >= 0; i--) {
-        int sum  = *(n1 + i) + *(n2 + i) + mvdec;
+        int sum  = n1[i] + n2[i] + mvdec;
         int decimal = sum % 10;
-        *(res + i + 1) = decimal;
+        res[i + 1] = decimal;
 
         mvdec = sum / 10;
     }
@@ -47,26 +48,26 @@ int * multiple(int * n1, int * n2, int decimals1, int decimals2) {
     for (int i = decimals2 - 1; i >= 0; i--) {
         int size = 1;
         int step = 1;
-        *(steps + i) = (int *)malloc(size * sizeof(int));
+        steps[i] = (int *)malloc(size * sizeof(int));
 
 
         while (step != 0) {
             int mult = ((*n1) * (*n2)) + mvdec;
-            *(*(steps + i) + step) = mult % 10;
+            steps[i][step] = mult % 10;
             mvdec = mult / 10;
 
             if (mvdec != 0) {
-                *(steps + i) = (int *)realloc(*(steps + i), (size + 1) * sizeof(int));
+                steps[i] = (int *)realloc(steps[i], (size + 1) * sizeof(int));
                 size++;
                 step++;
             }
             step--;
         }
-        *(sizes + i) = size;
+        sizes[i] = size;
     }
 
     for (int i = 0; i < decimals2; i++) {
-        int size = *(sizes + i);
+        int size = sizes[i];
         for (int j = 0; j < size; j++) {
             printf("%d\n", steps[i][j]);
         }
@@ -76,13 +77,13 @@ int * multiple(int * n1, int * n2, int decimals1, int decimals2) {
     int maxsize = max(sizes, decimals2);
 
     for (int i = 0; i < decimals2; i++) {
-        *(steps + i) = (int *)realloc(*(steps + i), maxsize);
+        steps[i] = (int *)realloc(steps[i], maxsize);
     }
 
     int * res = *steps;
 
     for (int i = 1; i < decimals2; i++) {
-        res = add(res, *(steps + i), maxsize);
+        res = add(res, steps[i], maxsize);
     }
 
     free(sizes);
@@ -121,7 +122,7 @@ int main() {
     result = multiple(n1, n2, decimals, decimals);
 
     for (int i = 0; i < decimals + 1; i++) {
-        int num = *(result + i);
+        int num = result[i];
         printf("%d", num);
     }
 

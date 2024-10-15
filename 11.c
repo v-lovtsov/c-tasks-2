@@ -16,7 +16,7 @@ void mvelsl(int * arr, int size, int from) {
         cfrom = 1;
 
     for (int i = cfrom; i < size; i++) {
-        *(arr + i - 1) = *(arr + i);
+        arr[i - 1] = arr[i];
     }
 }
 
@@ -27,7 +27,7 @@ int * delel(int * arr, int * size, int idx) {
 
     int * copy = (int *)malloc(sizeof(int) * (dsize - 1));
     for (int i = 0; i < dsize - 1; i++) {
-        *(copy + i) = *(arr + i);
+        copy[i] = arr[i];
     }
 
     free(arr);
@@ -42,13 +42,13 @@ int * delete_copies(int * arr, int * size, int start) {
         return arr;
     }
 
-    int el = *(arr + start);
+    int el = arr[start];
     int * copy = arr;
 
     int i = start + 1;
 
     while (i < *size) {
-        if (*(copy + i) == el) {
+        if (copy[i] == el) {
             copy = delel(copy, size, i);
             i--;
         }
@@ -70,7 +70,7 @@ int main() {
     fill_array(arr, size);
 
     for (int i = 0; i < size; i++) {
-        int num = *(arr + i);
+        int num = arr[i];
         printf("%d ", num);
     }
 
@@ -79,7 +79,7 @@ int main() {
     arr = delete_copies(arr, &size, 0);
     
     for (int i = 0; i < size; i++) {
-        int num = *(arr + i);
+        int num = arr[i];
         printf("%d ", num);
     }
 

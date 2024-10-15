@@ -6,7 +6,7 @@
 
 void fill_array(int * nums, int size) {
     for (int i = 0; i < size; i++) {
-        *(nums + i) = rand() % 10000;
+        nums[i] = rand() % 10000;
     }
 }
 
@@ -25,7 +25,7 @@ int main() {
     int curlen = 0;
 
     for (int i = 0; i < n; i++) {
-        int num = *(nums + i);
+        int num = nums[i];
 
         if (num % 2 != 0)
             curlen++;
@@ -36,7 +36,7 @@ int main() {
     }
 
     for (int i = 0; i < n; i++) {
-        int num = *(nums + i);
+        int num = nums[i];
         
         printf("%d ", num);
     }
